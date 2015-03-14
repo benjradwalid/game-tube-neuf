@@ -1,25 +1,29 @@
 package domain;
 
-import domain.User;
 import java.io.Serializable;
-import java.lang.Float;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
 
 /**
  * Entity implementation class for Entity: Player
  *
  */
 @Entity
-
 public class Player extends User implements Serializable {
 
-	
-	private Float balance;
+	private Float balance = 100F;
 	private static final long serialVersionUID = 1L;
 
 	public Player() {
 		super();
-	}   
+	}
+
+	public Player(String name, String login, String password) {
+		this.setName(name);
+		this.setLogin(login);
+		this.setPassword(password);
+	}
+
 	public Float getBalance() {
 		return this.balance;
 	}
@@ -27,5 +31,5 @@ public class Player extends User implements Serializable {
 	public void setBalance(Float balance) {
 		this.balance = balance;
 	}
-   
+
 }
