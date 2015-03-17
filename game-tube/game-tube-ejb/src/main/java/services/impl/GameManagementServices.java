@@ -66,4 +66,15 @@ public class GameManagementServices implements GameManagementServicesRemote,
 		return entityManager.find(User.class, idUser);
 	}
 
+	@Override
+	public Boolean addPlayer(Player player) {
+		Boolean b = false;
+		try {
+			entityManager.persist(player);
+			b = true;
+		} catch (Exception e) {
+		}
+		return b;
+	}
+
 }
