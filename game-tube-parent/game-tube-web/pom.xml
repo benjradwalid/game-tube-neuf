@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>tn.edu.esprit.info2</groupId>
-		<artifactId>game-tube-parent</artifactId>
+		<artifactId>game-tube</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>game-tube-web</artifactId>
