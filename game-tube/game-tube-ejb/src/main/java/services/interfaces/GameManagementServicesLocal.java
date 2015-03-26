@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Local;
 
 import domain.Pass;
+import domain.Player;
 import domain.User;
 
 @Local
@@ -16,4 +17,7 @@ public interface GameManagementServicesLocal {
 	Boolean purchasePass(Integer idUser, Pass pass);
 
 	User findUserById(Integer idUser);
+
+	Boolean addPlayer(Player player);
+
 }
