@@ -10,10 +10,11 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputText value="login" />
-			<h:inputText value="#{loginBean.user.login}" />
+			<h:inputText value="#{lb.user.login}" />
 			<h:outputText value="password" />
-			<h:inputSecret value="#{loginBean.user.password}" />
-			<h:commandButton action="#{loginBean.doLogin}" value="login" />
+			<h:inputSecret value="#{lb.user.password}" />
+			<h:commandButton action="#{lb.doLogin}" value="login" />
+			<h:commandButton action="/pages/addPlayer" value="subscribe" />
 		</h:panelGrid>
 	</h:form>
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h1>list of Passes</h1>
+	<h:form>
+
+		<h:dataTable border="1" value="#{playerManagementBean.datamodel}"
+			var="p">
+			<h:column id="column1">
+				<f:facet name="header">
+					<h:outputText value="type"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{p.type}" />
+			</h:column>
+			<h:column id="column2">
+				<f:facet name="header">
+					<h:outputText value="price"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{p.price}" />
+			</h:column>
+			<h:column id="column3">
+				<f:facet name="header">
+					<h:outputText value="#"></h:outputText>
+				</f:facet>
+				<h:commandButton
+					action="#{playerManagementBean.doPurchasePass}" value=" purchase" />
+			</h:column>
+		</h:dataTable>
+
+	</h:form>
+</body>
+</html>
