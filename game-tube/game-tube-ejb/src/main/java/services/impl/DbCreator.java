@@ -22,7 +22,6 @@ public class DbCreator {
 	 * Default constructor.
 	 */
 	public DbCreator() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@PostConstruct

@@ -16,6 +16,5 @@ public interface GameManagementServicesRemote {
 	Boolean purchasePass(Integer idUser, Pass pass);
 
 	User findUserById(Integer idUser);
-	
 
 }
