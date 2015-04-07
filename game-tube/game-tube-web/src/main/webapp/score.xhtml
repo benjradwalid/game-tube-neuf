@@ -7,11 +7,11 @@
 	<ui:define name="pageContent">
 		
 <h:form id="form">
-    <p:dataList value="#{dataListView.cars1}" var="car" type="ordered">
+    <p:dataList value="#{dataListBean.players}" var="player" type="ordered">
         <f:facet name="header">
             Total Score
         </f:facet>
-        #{car.brand}, #{car.year} 
+        #{player.id}, #{player.name}, #{player.balance} 
       
       
     </p:dataList>  
