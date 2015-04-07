@@ -3,3 +3,5 @@
 /javaEE/
 /.classpath
 /.project
+/build/
+/WebContent/

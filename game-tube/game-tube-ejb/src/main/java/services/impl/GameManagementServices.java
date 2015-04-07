@@ -83,4 +83,10 @@ public class GameManagementServices implements GameManagementServicesRemote,
 				.getResultList();
 
 	}
+	
+	@Override
+	public List<Integer> getThreeCards() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

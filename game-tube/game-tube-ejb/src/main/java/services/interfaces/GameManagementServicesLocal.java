@@ -21,5 +21,7 @@ public interface GameManagementServicesLocal {
 	Boolean addPlayer(Player player);
 	
 	List<Player> getPlayers();
+	
+	List<Integer> getThreeCards() ;
 
 }

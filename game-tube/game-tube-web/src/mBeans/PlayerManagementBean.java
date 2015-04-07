@@ -53,6 +53,12 @@ public class PlayerManagementBean {
 		passes = gameManagementServicesLocal.findAllPasses();
 		return passes;
 	}
+	
+	public List<Integer> getThreeCards(){
+		List<Integer>  cards = gameManagementServicesLocal.getThreeCards() ;
+		return cards ;
+		
+	}
 
 	public void setPasses(List<Pass> passes) {
 		this.passes = passes;
