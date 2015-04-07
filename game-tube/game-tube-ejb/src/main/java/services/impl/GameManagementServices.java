@@ -79,7 +79,8 @@ public class GameManagementServices implements GameManagementServicesRemote,
 
 	public List<Player> getPlayers() {
 
-		return null;
+		return entityManager.createQuery("select p from user p", Player.class)
+				.getResultList();
 
 	}
 }
