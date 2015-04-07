@@ -77,4 +77,9 @@ public class GameManagementServices implements GameManagementServicesRemote,
 		return b;
 	}
 
+	public List<Player> getPlayers() {
+
+		return null;
+
+	}
 }
