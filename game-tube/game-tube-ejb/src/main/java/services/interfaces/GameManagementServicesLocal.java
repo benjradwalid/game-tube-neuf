@@ -19,5 +19,7 @@ public interface GameManagementServicesLocal {
 	User findUserById(Integer idUser);
 
 	Boolean addPlayer(Player player);
+	
+	List<Player> getPlayers();
 
 }
