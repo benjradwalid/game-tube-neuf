@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/subscribetemplate.xhtml"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="pageTitle">subscribe</ui:define>
+	
+	
+	<ui:define name="pageContent">
+		
+		<h:form>
+    <h:panelGrid columns="2" cellpadding="5">
+
+	  <p:outputLabel for="name" value="Name:" />
+        <p:inputMask id="name" value="#{playerManagementBean.player.name}"/>
+
+
+        <p:outputLabel for="login" value="Login: " />
+        <p:inputText id="login" value="#{playerManagementBean.player.login}"/>
+        
+        <p:outputLabel for="password" value="Password:" />
+        <p:inputMask id="password" value="#{playerManagementBean.player.password}"/>
+        
+
+ 
+        <p:commandButton value="Reset" type="reset" />
+        <p:commandButton value="Submit" update="display" action="#{playerManagementBean.doAddPlayer}"/>
+    </h:panelGrid>
+ 
+    <p:dialog widgetVar="dlg" modal="true" resizable="false" header="Values" showEffect="fade"> 
+        <p:panelGrid id="display" columns="2" columnClasses="label,value">
+		
+		<h:outputText value="Name:" />
+            <h:outputText id="nameValue" value="#{playerManagementBean.player.name}"/>
+
+            <h:outputText value="Login: " />
+            <h:outputText id="loginValue" value="#{playerManagementBean.player.login}" />
+            
+            <h:outputText value="Password " />
+            <h:outputText id="passwordValue" value="#{playerManagementBean.player.password}" />
+		</p:panelGrid>
+		</p:dialog></h:form>
+
+
+	</ui:define>
+	</ui:composition>      
